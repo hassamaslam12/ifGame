@@ -17,19 +17,23 @@
   
     <script>
         // let isopen = true;
-        let number = +document.querySelector("#number").value
+        let number = +document.querySelector("#number").value;
+        
         function doCheck(){
-            let result = ""
-            let temp = math.floor(math.random() *5)
+            let temp = math.floor(math.random() * 5)
+            
+            
             console.log(temp)
             if (number === temp ){
-                result ="congrats you have won";
+              let  result ="congrats you have won";
+               result = document.querySelector("#result").innerHTML=result;
             }
             else {
-                result = "Try Again"
+               let result = "Try Again"
+                result = document.querySelector("#result").innerHTML=result;
             }
-            Document.querySelector("#result").innerHTML=result;
-
+            
+           
         }
         
     </script>
