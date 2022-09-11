@@ -7,7 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>h1</h1>
-    
+    <h1>welcome to my game</h1>
+    <h2>Guess a number between 1 & 5</h2>
+    <form  onsubmit="doCheck(); return false">
+    <input type="number" id="number">
+    <button >play</button>
+</form>
+<h2 id="result"></h2><br>
+  
+    <script>
+        // let isopen = true;
+        let number = +document.querySelector("#number").value
+        function doCheck(){
+            let result = ""
+            let temp = math.floor(math.random() *5)
+            console.log(temp)
+            if (number === temp ){
+                result ="congrats you have won";
+            }
+            else {
+                result = "Try Again"
+            }
+            Document.querySelector("#result").innerHTML=result;
+
+        }
+        
+    </script>
 </body>
 </html>
