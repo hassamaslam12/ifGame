@@ -6,32 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>if game</title>
 </head>
-<body>
+<body><div>
+
     <h1>welcome to my game</h1>
+    <span>
+        Game description:You will guess a number and computer will guess a number if the number is same you win.
+    </span>
+    
     <h2>Guess a number between 1 & 5</h2>
     <form  onsubmit="doCheck(); return false">
-    <input type="number" id="number" min="1" max="5">
-    <button >play</button>
+        <input type="number" id="number" min="1" max="5">
+        <button >play</button>
+    </div>
+        
 </form>
 <h2 id="result"></h2><br>
+<span>computer guessed : </span>
+<h2 id="temp"><br></h2>
+<!-- <h5>So close! try again</h5> -->
   
     <script>
         // let isopen = true;
         let number = +document.querySelector("#number").value;
         
         function doCheck(){
-            let temp = Math.floor(Math.random() * 5)
+            let temp = Math.floor(Math.random() * 6)
             
             
             console.log(temp)
             if (number === temp ){
               let  result ="congrats you have won";
-               result = document.querySelector("#result").innerHTML=result;
+              result = document.querySelector("#result").innerHTML=result;
             }
             else {
-               let result = "Try Again"
+                let result = "So close! Try Again"
                 result = document.querySelector("#result").innerHTML=result;
+                // document.querySelector("#temp").innerHTML=temp;
             }
+            temp = document.querySelector("#temp").innerHTML=temp;
             
            
         }
