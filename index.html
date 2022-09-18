@@ -54,7 +54,7 @@
         Game description:You will guess a number and computer will guess a number if the number is same you win.
     </span>
     
-    <h2>Guess a number between 1 & 5</h2>
+    <h2>Guess a number between 0 & 5</h2>
     <form  onsubmit="doCheck(); return false">
         <input type="number" id="number" min="1" max="5">
         <button >play</button>
@@ -69,7 +69,7 @@
         let number = +document.querySelector("#number").value;
         
         function doCheck(){
-            let temp = Math.floor(Math.random() * 6)
+            let temp = Math.floor(Math.random() * 5)
             
             
             console.log(temp)
